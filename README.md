@@ -36,6 +36,24 @@ npm run client   # Vite on port 5173
 - **Product page:** Dedicated page per product with description, price, category, SKU, and stock.
 - **Admin dashboard:** Add, edit, and delete products; set name, brand, category, description, price, image URL, SKU, and stock (inventory).
 
+## Deploy (Vercel + Render)
+
+The frontend runs on Vercel; the API must run elsewhere (e.g. Render).
+
+1. **Deploy the API (Render)**  
+   - Create a new **Web Service** at [render.com](https://render.com), connect your GitHub repo.  
+   - Set **Root Directory** to `server`.  
+   - **Build command:** `npm install`  
+   - **Start command:** `npm start`  
+   - Deploy and copy the service URL (e.g. `https://your-api.onrender.com`).
+
+2. **Point the frontend at the API (Vercel)**  
+   - In your Vercel project: **Settings → Environment Variables**.  
+   - Add: **Name** `VITE_API_URL`, **Value** your API URL (e.g. `https://your-api.onrender.com`).  
+   - Redeploy the frontend so the new variable is applied.
+
+The app will then load products from your deployed API.
+
 ## Project structure
 
 ```
