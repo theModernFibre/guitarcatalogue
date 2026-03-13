@@ -1,0 +1,19 @@
+# Dependencies
+node_modules
+client/node_modules
+server/node_modules
+
+# Build
+client/dist
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Server data (recreated from defaults on first run)
+server/data/products.json
+
+# Logs and OS
+*.log
+.DS_Store
