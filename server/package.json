@@ -4,9 +4,13 @@
   "description": "Express API for guitar catalogue",
   "main": "index.js",
   "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "start": "node index.js",
-    "dev": "node index.js"
+    "dev": "node index.js",
+    "build": "npm install"
   },
   "dependencies": {
     "cors": "^2.8.5",
